@@ -19,6 +19,12 @@ next.addEventListener( "click", function() {
         // aggiungiamo la classe active all'elemento successivo
         items[activeItem].classList.add("active");
 
+        if (activeItem === items.length -1) {
+            next.classList.add("hidden");
+        } else {
+            prev.classList.remove("hidden");
+        }
+
     }
 
 });
@@ -27,7 +33,7 @@ const prev = document.querySelector(".prev");
 
 prev.addEventListener( "click", function() {
 
-    if (activeItem < items.length - 1) {
+    if (activeItem <= items.length - 1) {
         // togliamo la classe active all'elemento corrente
         items[activeItem].classList.remove("active");
 
@@ -36,6 +42,12 @@ prev.addEventListener( "click", function() {
 
         // aggiungiamo la classe active all'elemento successivo
         items[activeItem].classList.add("active");
+
+        if (activeItem === 0) {
+            prev.classList.add("hidden");
+        } else {
+            next.classList.remove("hidden");
+        }
 
     }
 
