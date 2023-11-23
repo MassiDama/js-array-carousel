@@ -5,3 +5,21 @@
     box-sizing: border-box;
 }
 
+/* stili all'interno del conteiner */
+.slider {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.item {
+    display: none;
+}
+
+.active {
+    display: inline-block;
+}
+
+.item img {
+    width: 100%;
+}
+
